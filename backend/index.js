@@ -19,15 +19,15 @@ const contactEmail = nodemailer.createTransport({
   
   contactEmail.verify((error) => {
     if (error) {
-      console.log('error in varifying: ',error);
+      // console.log('error in varifying: ',error);
     } else {
-      console.log("Ready to Send");
+      // console.log("Ready to Send");
     }
   });
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('build'));
-  console.log('server is runnig in heroku');
+  // console.log('server is runnig in heroku');
 }
   router.post("/contact", (req, res) => {
     const name = req.body.name;
@@ -43,10 +43,10 @@ if(process.env.NODE_ENV === 'production'){
     };
     contactEmail.sendMail(mail, (error) => {
       if (error) {
-        console.log('error in sending message', error);
+        // console.log('error in sending message', error);
         res.json({ status: "ERROR" });
       } else {
-        console.log('Message sent');
+        // console.log('Message sent');
         res.json({ status: "Message Sent" });
       }
     });

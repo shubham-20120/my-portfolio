@@ -22,10 +22,10 @@ const ContactForm = () => {
       body: JSON.stringify(details),
     });
     setStatus("Submit");
-    console.log('response: ------ ', response);
-    console.log('started waiting for response.json')
+    // console.log('response: ------ ', response);
+    // console.log('started waiting for response.json')
     let result = await response.json();
-    console.log('result for response.json: ', result);
+    // console.log('result for response.json: ', result);
     // alert(result.status);
   };
   return (

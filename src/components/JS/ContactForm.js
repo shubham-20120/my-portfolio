@@ -29,7 +29,7 @@ const ContactForm = () => {
     // alert(result.status);
   };
   return (
-    <div className='contact-main'>
+    <div className='contact-main' id='contact'>
     <form onSubmit={handleSubmit} className='contact-form'>
     <div className="contact-upper-text">Contact/Hire Me</div>
       <div className='contact-name'>

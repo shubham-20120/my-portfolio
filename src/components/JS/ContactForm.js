@@ -26,7 +26,7 @@ const ContactForm = () => {
     // console.log('started waiting for response.json')
     let result = await response.json();
     // console.log('result for response.json: ', result);
-    // alert(result.status);
+    alert(result.status);
   };
   return (
     <div className='contact-main' id='contact'>
@@ -50,6 +50,7 @@ const ContactForm = () => {
       </div>
       <div className="contact-btn-div"><button type="submit" className='contact-btn'>{status}</button>
       </div>
+      <div className="finalmessage">It will take some time to send message, Hold On!</div>
     </form>
     </div>
   );

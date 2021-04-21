@@ -91,6 +91,13 @@
   background: rgb(64, 64, 64);
   border-radius: 10px;
 }
+.finalmessage {
+  display: block;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  margin: auto;
+  background: rgb(64, 64, 64);
+}
 @media only screen and (max-device-width: 675px) {
   .contact-input,
   .contact-textarea {

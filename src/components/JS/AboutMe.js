@@ -3,8 +3,8 @@ import photo from '../../Images/aboutMe.png';
 import '../CSS/AboutMe.css';
 function AboutMe(){
     return(
-        <div className="main-about">
-            <div className="photo-section-about" id='about'>
+        <div className="main-about" id='about'>
+            <div className="photo-section-about">
                 <img className='photo-about' src={photo} alt="About Me Photo"/>
             </div>
             <div className="text-about">

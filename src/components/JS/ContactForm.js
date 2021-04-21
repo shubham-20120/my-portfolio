@@ -50,7 +50,7 @@ const ContactForm = () => {
       </div>
       <div className="contact-btn-div"><button type="submit" className='contact-btn'>{status}</button>
       </div>
-      <div className="finalmessage">It will take some time to send message, Hold On!</div>
+      {/* <div className="finalmessage">It will take some time to send message, Hold On!</div> */}
     </form>
     </div>
   );

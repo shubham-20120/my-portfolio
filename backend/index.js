@@ -27,6 +27,7 @@ const contactEmail = nodemailer.createTransport({
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('build'));
+  console.log('server is runnig in heroku');
 }
   router.post("/contact", (req, res) => {
     const name = req.body.name;

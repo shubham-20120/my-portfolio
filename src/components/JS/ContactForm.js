@@ -20,7 +20,9 @@ const ContactForm = () => {
       body: JSON.stringify(details),
     });
     setStatus("Submit");
+    console.log('started waiting for response.json')
     let result = await response.json();
+    console.log('result for response.json: ', result);
     alert(result.status);
   };
   return (

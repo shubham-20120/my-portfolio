@@ -11,6 +11,7 @@
   },
   "author": "shubham",
   "license": "ISC",
+  "proxy": "http://localhost/5000",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",

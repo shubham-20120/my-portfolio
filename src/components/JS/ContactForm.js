@@ -12,21 +12,21 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:5000/contact", {
+    // process.env.REACT_APP_API_URL + '/contact'
+    // "http://localhost:5000/contact" 
+    let response = await fetch("http://localhost:5000/contact" , {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(details),
     });
-    console.log('response before: ', response);
-    JSON.parse(response);
-    console.log('response after: ', response);
     setStatus("Submit");
+    console.log('response: ------ ', response);
     console.log('started waiting for response.json')
     let result = await response.json();
     console.log('result for response.json: ', result);
-    alert(result.status);
+    // alert(result.status);
   };
   return (
     <div className='contact-main'>

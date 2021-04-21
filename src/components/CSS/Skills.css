@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.main-skills {
+  display: flex;
+  padding-left: 2vw;
+  padding-bottom: 10vh;
+  background: black;
+}
+.left-section-skills {
+  background: #81f5b1;
+}
+.skill-photo {
+  height: 60vh;
+  /* width: 5px; */
+}
+.text-skill {
+  scrollbar-width: none;
+  background: #81f5b1;
+  border-radius: 5px;
+  padding: 2vh 2vw;
+  overflow: auto;
+  font-size: 1.2rem;
+}
+.skill-inner-text {
+  background: #81f5b1;
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 2.2rem;
+  color: black;
+}
+.skill-bar-skills {
+  background: #81f5b1;
+}
+.sub {
+  list-style: none;
+}
+.sub li:before {
+  content: "\2192 \0020";
+}
+li {
+  background: #81f5b1;
+  padding-left: 50px;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: bold;
+}
+.top-img-skills {
+  display: none;
+}
+@media only screen and (max-device-width: 975px) {
+  .text-skill .skill-inner-text {
+    font-size: 1.05rem;
+    padding: 10px;
+  }
+  .left-section-skills {
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-device-width: 850px) {
+  .right-img-skill {
+    display: none;
+  }
+  .top-img-skills .skill-photo {
+    width: 360px;
+    /* margin-left: 5vw; */
+    height: 40vh;
+    /* align-self: center; */
+  }
+  .top-img-skills {
+    display: inline;
+    display: flex;
+    justify-content: center;
+  }
+  .left-section-skills {
+    margin: 5vh 10px;
+  }
+  .main-skills {
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    padding-left: 10px;
+    font-size: 1rem;
+  }
+}

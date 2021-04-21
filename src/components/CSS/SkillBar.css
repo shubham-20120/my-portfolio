@@ -1,0 +1,183 @@
+/* html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #6665ee;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&display=swap");
+.skill-bars::selection {
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars {
+  padding: 10px 30px;
+  width: auto;
+  background: #81f5b1;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 20px;
+  font-family: "Lato", sans-serif;
+  /* background: red; */
+
+  font-family: "Roboto", sans-serif;
+}
+/* .bar {
+  background: blue;
+} */
+.skill-bars .bar {
+  background: #81f5b1;
+  /* background: blue; */
+
+  /* : 20px 0; */
+}
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+  background: #81f5b1;
+  /* background: blue; */
+}
+.skill-bars .bar .info span {
+  font-weight: 500;
+  background: #81f5b1;
+  color: #000;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+/* .html {
+  background: blue;
+} */
+.skill-bars .bar .progress-line {
+  height: 10px;
+  /* width: 95%; */
+  background: #f0f0f0; /*progress bar background*/
+  /* position: relative; */
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px #81f5b1;
+  margin-top: 30px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  /* background: #81f5b1; */
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  /* width: 90%; */
+  margin-left: 0;
+
+  /* margin-top: 20px; */
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: rgb(0, 0, 0);
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  /* margin-top: 100px; */ /* percent show margin */
+  animation: showText2 1s 1.5s linear forwards;
+  /* background: blue; */ /*% background*/
+  color: #fff;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.mern.html span::after {
+  content: "95%";
+  /* padding: 5px ; */
+  font-size: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+.flutter.html span::after {
+  font-size: 0.75rem;
+  content: "40%";
+  font-family: "Roboto", sans-serif;
+}
+.cpp.html span::after {
+  font-size: 0.75rem;
+  content: "80%";
+  font-family: "Roboto", sans-serif;
+}
+.python.html span::after {
+  font-size: 0.75rem;
+  content: "85%";
+  font-family: "Roboto", sans-serif;
+}
+.ml.html span::after {
+  font-size: 0.75rem;
+  content: "60%";
+  font-family: "Roboto", sans-serif;
+}
+.bar {
+  margin: 20px;
+}
+@media only screen and (max-device-width: 550px) {
+  .skill-bars {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    /* background: blue; */
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+  }
+  .skills-line span {
+    margin: 100px;
+  }
+
+  .progress-line {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  /* .skill-bars .bar  */
+  .skill-bars .bar {
+    background: #3dff8e;
+    box-shadow: 0 0 10px 5px #3af085;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}

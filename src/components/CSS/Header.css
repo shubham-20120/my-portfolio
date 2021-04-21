@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.main-header {
+  height: 80vh;
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  background: black;
+  /* background: blue; */
+}
+.photoSection {
+  /* background: cornflowerblue; */
+  width: 50vw;
+  display: flex;
+}
+.myPhoto {
+  /* background: chocolate; */
+  border-radius: 50%;
+  margin-left: 25vw;
+  height: 270px;
+}
+span {
+  color: rgb(220, 20, 130);
+  /* margin-left: -5px; */
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+.typist {
+  font-weight: bold;
+  color: rgb(220, 20, 130);
+  font-size: 1.75rem;
+  margin-left: 0;
+}
+.textSection {
+  /* background: chartreuse; */
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-header {
+  display: flex;
+  background: black;
+  /* background: grey; */
+  justify-content: space-evenly;
+  /* background: blanchedalmond; */
+  height: 20vh;
+  padding: 2px;
+}
+
+.header-btn {
+  height: 5vh;
+  padding: 1.2vh 2vw;
+  outline: 0;
+  border: 0;
+  background: linear-gradient(to left, #000287, #059aad);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 2px;
+  margin: 2px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.05s;
+  box-shadow: -0.5px 6px 2px 2px gray;
+}
+.dontShowCross {
+  display: none;
+}
+.header-btn:active {
+  box-shadow: -0.2px 3px 1px 0 rgb(88, 88, 88);
+  transform: translateY(3px);
+}
+
+@media only screen and (max-device-width: 1230px) {
+  .myPhoto {
+    margin-left: 20vw;
+    /* height: 240px; */
+  }
+}
+
+@media only screen and (max-device-width: 975px) {
+  .wrap {
+    display: none;
+  }
+  .main-header {
+    flex-direction: column;
+  }
+  .textSection {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100vw;
+  }
+  .myPhoto {
+    margin-left: 0;
+    margin-top: 50px;
+    height: 250px;
+  }
+  .photoSection {
+    width: 100vw;
+    justify-content: center;
+  }
+}
+@media only screen and (max-device-width: 425px) {
+  .textSection {
+    font-size: 1rem;
+  }
+  span {
+    font-size: 1.3rem;
+  }
+  .typist {
+    font-size: 1.2rem;
+  }
+  .myPhoto {
+    height: 220px;
+  }
+}

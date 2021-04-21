@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+.main-about {
+  background: black;
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding-bottom: 10vh;
+  /* padding: 0 3vw 10vh 3vw; */
+  margin-top: 5vh;
+}
+
+/* .photo-section-about {
+  width: 20vw;
+  background: red;
+  width: auto;
+  height: 20vh;
+} */
+.photo-about {
+  height: 40vh;
+  /* width: 20vw; */
+}
+.text-about {
+  background: rebeccapurple;
+  border-radius: 5px;
+  height: auto;
+  width: 70vw;
+  padding: 5vh 4vw;
+  font-size: 1.2rem;
+  font-family: "Nanum Gothic", sans-serif;
+  line-height: 2rem;
+}
+.p-about {
+  background: rebeccapurple;
+}
+.a-about {
+  background: rebeccapurple;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 10px 0;
+}
+@media only screen and (max-device-width: 850px) {
+  .main-about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-about {
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+}

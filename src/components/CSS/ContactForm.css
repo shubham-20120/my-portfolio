@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
+.contact-main {
+  /* background: red; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-upper-text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+  font-size: 1.7rem;
+  background: rgb(64, 64, 64);
+  font-family: "Rubik", sans-serif;
+}
+.contact-form {
+  background: rgb(64, 64, 64);
+  border-radius: 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  padding: 3vh 25px;
+}
+.contact-input,
+.contact-textarea {
+  display: block;
+  border: 0;
+  width: 400px;
+  height: 3.5vh;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: rgb(94, 94, 94);
+  padding: 4px 9px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  transition: 0.4s;
+}
+.contact-textarea {
+  display: block;
+  height: 15vh;
+  resize: none;
+}
+.contact-asterisk {
+  font-size: 1rem;
+  background: rgb(64, 64, 64);
+  color: red;
+}
+.contact-input:focus,
+.contact-textarea:focus {
+  border: 0;
+  outline: 0;
+  inset: 0;
+  background: rgb(76, 76, 76);
+}
+/* label {
+  background: rgb(64, 64, 64);
+} */
+.contact-btn-div {
+  display: flex;
+  justify-content: center;
+  background: rgb(64, 64, 64);
+  padding: 5px 20px;
+  border-radius: 10px;
+  border: 0;
+  /* background: chocolate; */
+}
+.contact-btn {
+  background: rgb(84, 86, 91);
+  padding: 7px 20px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+.contact-btn:active {
+  color: white;
+  background: rgb(57, 58, 61);
+}
+.contact-btn:hover {
+  cursor: pointer;
+}
+.contact-text {
+  background: rgb(64, 64, 64);
+  display: block;
+}
+.contact-message,
+.contact-email,
+.contact-name {
+  background: rgb(64, 64, 64);
+  border-radius: 10px;
+}
+@media only screen and (max-device-width: 675px) {
+  .contact-input,
+  .contact-textarea {
+    width: 350px;
+  }
+}
+@media only screen and (max-device-width: 500px) {
+  .contact-form {
+    padding: 15px;
+  }
+  .contact-input,
+  .contact-textarea {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .contact-upper-text {
+    margin-bottom: 5vh;
+    word-spacing: 0.5rem;
+  }
+}
+
+@media only screen and (max-device-width: 400px) {
+  .contact-input,
+  .contact-textarea {
+    width: 245px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}

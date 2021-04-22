@@ -15,7 +15,7 @@ body {
   padding: 10px 30px;
   width: auto;
   background: #81f5b1;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); */
   border-radius: 10px;
   margin: 20px;
   font-family: "Lato", sans-serif;
@@ -118,6 +118,12 @@ body {
   animation: showText2 1s 1.5s linear forwards;
   /* background: blue; */ /*% background*/
   color: #fff;
+}
+.skill-bars .bar {
+  background: #3dff8e;
+  box-shadow: 0 0 10px 5px #3af085;
+  padding: 20px;
+  border-radius: 8px;
 }
 @keyframes showText2 {
   100% {

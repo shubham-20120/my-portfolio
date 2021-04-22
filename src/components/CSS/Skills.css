@@ -6,6 +6,7 @@
   background: black;
 }
 .left-section-skills {
+  border-radius: 7px;
   background: #81f5b1;
 }
 .skill-photo {
@@ -15,7 +16,8 @@
 .text-skill {
   scrollbar-width: none;
   background: #81f5b1;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  border-radius: 10px;
   padding: 2vh 2vw;
   overflow: auto;
   font-size: 1.2rem;

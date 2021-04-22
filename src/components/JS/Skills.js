@@ -12,8 +12,7 @@ function Skills(){
 
                 <div className="text-skill">
                     <p className='skill-inner-text'>
-                        I have more than two years of experience in Computer World.
-                        I can code in programming languages like C++, Python and Javascript. I have experience in MERN stack technologies, Flutter Development and currently exploring the field of Artificial Intelligence algorithms.
+                        With more than two years of experience in Computer World, I can code in programming languages like C++, Python and Javascript. I have experience in MERN stack technologies, Flutter Development and currently exploring the field of Machine Learning and Data Science.
                     </p>
                 </div>
 

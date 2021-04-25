@@ -40,10 +40,10 @@ const ContactForm = () => {
         <label htmlFor="email" className='contact-text'>Email <span className='contact-asterisk'>*</span></label>
         <input className='contact-input' type="email" id="email" required />
       </div>
-      <div className='contact-name'>
+      {/* <div className='contact-name'>
         <label htmlFor="name" className='contact-text'>Contact No.</label>
         <input placeholder='optional' className='contact-input' type="text" id="name" />
-      </div>
+      </div> */}
       <div className='contact-message'>
         <label htmlFor="message" className='contact-text'>Message <span className='contact-asterisk'>*</span></label>
         <textarea className='contact-textarea' id="message" required />

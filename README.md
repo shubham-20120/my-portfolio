@@ -1,4 +1,4 @@
-You can have a look at my portfolio [HERE](https://patel-shubham-portfolio.herokuapp.com/)
+Live Portfolio [HERE](https://patel-shubham-portfolio.herokuapp.com/)
 
 # Getting Started with Create React App
 

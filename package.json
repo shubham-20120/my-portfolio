@@ -1,14 +1,17 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "proxy": "http://localhost:5000",
   "private": true,
-  "homepage": "http://shubham-20120.github.io/my-portfolio", 
+  "homepage": "http://shubham-20120.github.io/my-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "firebase": "^8.6.8",
     "gh-pages": "^3.1.0",
     "mdbreact": "^5.0.2",
+    "nodemailer": "^6.6.2",
     "react": "^17.0.2",
     "react-burger-menu": "^3.0.6",
     "react-dom": "^17.0.2",

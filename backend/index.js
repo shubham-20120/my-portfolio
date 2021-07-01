@@ -10,44 +10,47 @@ app.use("/", router);
 app.listen(port, () => console.log("-----------------------------------------Server Running"));
 
 const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: "patelskd79@gmail.com",
-      pass: "particlepatel12543",
-    },
-  });
-  
-  contactEmail.verify((error) => {
-    if (error) {
-      // console.log('error in varifying: ',error);
-    } else {
-      // console.log("Ready to Send");
-    }
-  });
+  service: 'gmail',
+  auth: {
+    user: "patelskd79@gmail.com",
+    pass: "particlepatel12543",
+  },
+});
 
-if(process.env.NODE_ENV === 'production'){
+contactEmail.verify((error) => {
+  if (error) {
+    console.log('error in varifying: ', error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
+
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('build'));
   // console.log('server is runnig in heroku');
 }
-  router.post("/contact", (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const message = req.body.message; 
-    const mail = {
-      from: name,
-      to: "patelskd79@gmail.com",
-      subject: "Contact Form Submission",
-      html: `<p>Name: ${name}</p>
+router.post("/contact", (req, res) => {
+  console.log('====================================');
+  console.log(req.body);
+  console.log('====================================');
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+  const mail = {
+    from: name,
+    to: "patelskd79@gmail.com",
+    subject: "Contact Form Submission",
+    html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
              <p>Message: ${message}</p>`,
-    };
-    contactEmail.sendMail(mail, (error) => {
-      if (error) {
-        // console.log('error in sending message', error);
-        res.json({ status: "ERROR" });
-      } else {
-        // console.log('Message sent');
-        res.json({ status: "Message Sent" });
-      }
-    });
+  };
+  contactEmail.sendMail(mail, (error) => {
+    if (error) {
+      console.log('error in sending message', error);
+      res.json({ status: "ERROR" });
+    } else {
+      console.log('Message sent');
+      res.json({ status: "Message Sent" });
+    }
   });
+});

@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
   "private": true,
   "homepage": "http://shubham-20120.github.io/my-portfolio",
   "dependencies": {

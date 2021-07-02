@@ -9,6 +9,9 @@
   background: black;
   /* background: blue; */
 }
+.temp{
+  color: white !important;
+}
 .photoSection {
   /* background: cornflowerblue; */
   width: 50vw;

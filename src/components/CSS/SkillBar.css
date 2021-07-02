@@ -83,7 +83,6 @@ body {
   /* background: #81f5b1; */
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
-
 .bar .progress-line.html span {
   /* width: 90%; */
   margin-left: 0;

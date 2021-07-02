@@ -1,53 +1,36 @@
 import React, { useState } from "react";
 import '../CSS/ContactForm.css'
-
+import emailjs from 'emailjs-com';
+import { init } from 'emailjs-com';
 const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
+  init("user_RW8PaD2HqlcazkRDRZtRe");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    // const { name, email, message } = e.target.elements;
-    // let details = {
-    //   name: name.value,
-    //   email: email.value,
-    //   message: message.value,
-    // };
-    // let response = await 
-    fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        message
-      }),
-    })
-      .then(res => res.json())
-      .then((res) => {
-        if (res.error) {
-          alert('error from fetching')
-          console.log('====================================');
-          console.log(res.error);
-          console.log('====================================');
-          return
-        }
-        alert(res.status);
+    setStatus("Sending ...")
+    var templateParams = {
+      name: name,
+      email: email,
+      message: message
+    };
 
-      })
-    setStatus("Submit");
-    // console.log('response: ------ ', response);
-    // console.log('started waiting for response.json')
-    // let result = response.json();
-    // console.log('result for response.json: ', result);
+    emailjs.send('service_nk5iptp', 'template_6r8c12l', templateParams)
+      .then(function (response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Details sent');
+        setStatus("Sent")
+      }, function (error) {
+        alert('Failed to send Email :(');
+        setStatus("Submit")
+        console.log('FAILED...', error);
+      });
   };
   return (
     <div className='contact-main' id='contact'>
-      <form onSubmit={handleSubmit} className='contact-form'>
+      <form className='contact-form'>
         <div className="contact-upper-text">Contact/Hire Me</div>
         <div className='contact-name'>
           <label htmlFor="name" className='contact-text'>Name <span className='contact-asterisk'>*</span></label>
@@ -57,17 +40,12 @@ const ContactForm = () => {
           <label htmlFor="email" className='contact-text'>Email <span className='contact-asterisk'>*</span></label>
           <input value={email} onChange={(e) => { setEmail(e.target.value) }} className='contact-input' type="email" id="email" required />
         </div>
-        {/* <div className='contact-name'>
-        <label htmlFor="name" className='contact-text'>Contact No.</label>
-        <input placeholder='optional' className='contact-input' type="text" id="name" />
-      </div> */}
         <div className='contact-message'>
           <label htmlFor="message" className='contact-text'>Message <span className='contact-asterisk'>*</span></label>
           <textarea value={message} onChange={(e) => { setMessage(e.target.value) }} className='contact-textarea' id="message" required />
         </div>
-        <div className="contact-btn-div"><button type="submit" className='contact-btn'>{status}</button>
+        <div className="contact-btn-div"><button onClick={handleSubmit} type="submit" className='contact-btn'>{status}</button>
         </div>
-        {/* <div className="finalmessage">It will take some time to send message, Hold On!</div> */}
       </form>
     </div>
   );

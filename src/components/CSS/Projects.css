@@ -6,22 +6,27 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  margin: -15vh 0;
 }
 .project-title {
   font-family: "Rubik", sans-serif;
   font-weight: bold;
   letter-spacing: 0.3rem;
+  margin-bottom: -25vh;
 }
 .projects-list {
-  width: 100vw;
   display: flex;
-  justify-content: space-evenly;
-  /* background: blue; */
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .project-item {
   padding: 7px 20px;
+  margin: 5vh 5vw;
+  width: 230px;
   border-radius: 50px;
   background: blueviolet;
+  text-align: center;
 }
 a {
   text-decoration: none;
@@ -60,29 +65,42 @@ a {
     color: white;
   }
 }
-@media only screen and (max-device-width: 650px) {
+@media only screen and (max-device-width: 675px) {
   .projects-list {
-    flex-direction: column;
+    /* flex-direction: column;
     height: 50vh;
     width: 240px;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: center; */
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   }
+  .project-item {
+  padding: 7px 20px;
+  margin: 2vh 5vw;
+  width: 230px;
+}
   .projects-item:active {
     animation: none;
     background: greenyellow;
   }
   .project-title {
     font-size: 1.8rem;
+      margin-bottom: -10vh;
   }
+  
 }
 @media only screen and (max-device-width: 410px) {
   .projects-list {
-    flex-direction: column;
+    /* flex-direction: column;
     height: 50vh;
     width: 220px;
     font-size: 0.9rem;
-    text-align: center;
+    text-align: center; */
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   }
   .project-item:hover {
     animation: none;
